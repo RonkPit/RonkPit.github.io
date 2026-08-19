@@ -3440,7 +3440,8 @@ figcaption {
 }
 
 .navbar-link-wrapper:hover .navbar-link-line,
-.navbar-link-wrapper:focus-within .navbar-link-line {
+.navbar-link-wrapper:focus-within .navbar-link-line,
+.navbar-link.w--current ~ .navbar-link-line {
   transform: translateX(0);
 }
 
@@ -3997,7 +3998,8 @@ figcaption {
 }
 
 .navbar-link-wrapper:hover .navbar-link-line-2,
-.navbar-link-wrapper:focus-within .navbar-link-line-2 {
+.navbar-link-wrapper:focus-within .navbar-link-line-2,
+.navbar-link-2.w--current ~ .navbar-link-line-2 {
   transform: translateX(0);
 }
 
