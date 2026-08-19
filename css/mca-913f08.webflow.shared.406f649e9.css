@@ -3901,7 +3901,7 @@ figcaption {
 }
 
 .features-wrapper {
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   display: flex;
 }
@@ -3911,7 +3911,6 @@ figcaption {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  flex: 1;
   display: flex;
 }
 
@@ -4322,10 +4321,6 @@ figcaption {
 
   .container-2 {
     max-width: 728px;
-  }
-
-  .features-wrapper {
-    justify-content: space-between;
   }
 
   .navbar-link-2 {
