@@ -3911,6 +3911,7 @@ figcaption {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  flex: 1;
   display: flex;
 }
 
@@ -4674,6 +4675,7 @@ figcaption {
   }
 
   .features-block {
+    flex: 0 0 50%;
     width: 50%;
     margin-bottom: 40px;
   }
