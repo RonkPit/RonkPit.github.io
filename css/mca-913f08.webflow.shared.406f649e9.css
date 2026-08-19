@@ -3435,6 +3435,13 @@ figcaption {
 .navbar-link-line {
   background-color: var(--off-black);
   height: 1px;
+  transform: translateX(-100%);
+  transition: transform .3s ease;
+}
+
+.navbar-link-wrapper:hover .navbar-link-line,
+.navbar-link-wrapper:focus-within .navbar-link-line {
+  transform: translateX(0);
 }
 
 .text-color-primary-dark {
@@ -3985,6 +3992,13 @@ figcaption {
 .navbar-link-line-2 {
   background-color: #333;
   height: 1px;
+  transform: translateX(-100%);
+  transition: transform .3s ease;
+}
+
+.navbar-link-wrapper:hover .navbar-link-line-2,
+.navbar-link-wrapper:focus-within .navbar-link-line-2 {
+  transform: translateX(0);
 }
 
 .navbar-menu-dropdown-2 {
