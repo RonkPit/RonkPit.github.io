@@ -2586,7 +2586,7 @@ figcaption {
   font-family: Manrope, sans-serif;
   font-size: 4rem;
   font-weight: 300;
-  line-height: 1.2;
+  line-height: 1.35;
 }
 
 .heading-style-h1.max-with-small {
@@ -3382,6 +3382,7 @@ a.button:after {
   justify-content: space-between;
   align-items: flex-end;
   margin-bottom: 3rem;
+  padding-bottom: .25rem;
   display: flex;
   overflow: hidden;
 }
