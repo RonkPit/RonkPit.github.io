@@ -2488,6 +2488,7 @@ figcaption {
 }
 
 .icon-xxsmall {
+  display: none;
   width: .8rem;
   max-width: none;
   height: .8rem;
@@ -2605,19 +2606,39 @@ figcaption {
 }
 
 .button {
-  color: var(--off-black);
+  color: var(--white);
   text-align: left;
-  letter-spacing: 8px;
-  text-transform: uppercase;
-  background-color: #0000;
-  border: 1px solid #000;
+  letter-spacing: normal;
+  text-transform: none;
+  background-color: var(--black);
+  border: 1px solid var(--black);
+  border-radius: 999px;
   margin-top: 0;
   margin-bottom: 0;
   margin-left: auto;
-  padding: .125rem 0 .125rem .5rem;
-  font-size: 11px;
-  font-weight: 700;
+  padding: .9rem 1.5rem;
+  font-size: .875rem;
+  font-weight: 500;
   position: static;
+  align-items: center;
+  gap: .75rem;
+  transition: background-color .2s ease, border-color .2s ease;
+  display: inline-flex;
+}
+
+.button:hover {
+  color: var(--white);
+  background-color: #2b2b2b;
+  border-color: #2b2b2b;
+}
+
+.button:after {
+  content: "→";
+  transition: transform .2s ease;
+}
+
+.button:hover:after {
+  transform: translateX(4px);
 }
 
 .padding-small {
@@ -3369,22 +3390,37 @@ figcaption {
 }
 
 .main-button {
-  grid-column-gap: .5rem;
+  grid-column-gap: .75rem;
   grid-row-gap: .5rem;
-  color: var(--off-black);
+  color: var(--white);
   white-space: nowrap;
   flex: none;
   justify-content: center;
   align-self: flex-start;
   align-items: center;
   margin: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  font-weight: 600;
-  display: block;
+  background-color: var(--black);
+  border-radius: 999px;
+  padding: .9rem 1.5rem;
+  font-weight: 500;
+  display: inline-flex;
   position: relative;
   overflow: hidden;
+  transition: background-color .2s ease;
+}
+
+.main-button:hover {
+  color: var(--white);
+  background-color: #2b2b2b;
+}
+
+.main-button:after {
+  content: "→";
+  transition: transform .2s ease;
+}
+
+.main-button:hover:after {
+  transform: translateX(4px);
 }
 
 .main-button.align-left {
@@ -3399,6 +3435,17 @@ figcaption {
 
 .main-button.submit {
   align-self: flex-end;
+  background-color: #0000;
+  border-radius: 0;
+  padding: 0;
+}
+
+.main-button.submit:hover {
+  background-color: #0000;
+}
+
+.main-button.submit:after {
+  content: "";
 }
 
 .form-block {
@@ -3530,19 +3577,16 @@ figcaption {
 }
 
 .text-block {
-  color: var(--off-black);
-  letter-spacing: 8px;
-  -webkit-text-stroke-color: var(--off-black);
-  text-transform: uppercase;
-  font-size: .7rem;
+  color: var(--white);
+  letter-spacing: normal;
+  -webkit-text-stroke-color: var(--white);
+  text-transform: none;
+  font-size: .875rem;
   line-height: 1.5;
 }
 
 .line-button {
-  background-color: var(--off-black);
-  max-width: 11rem;
-  height: 1px;
-  margin-top: 1rem;
+  display: none;
 }
 
 .line-button.hide {
