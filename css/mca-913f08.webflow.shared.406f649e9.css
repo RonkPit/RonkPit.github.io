@@ -2632,14 +2632,6 @@ figcaption {
   border-color: #2b2b2b;
 }
 
-a.button:after {
-  content: "→";
-  transition: transform .2s ease;
-}
-
-a.button:hover:after {
-  transform: translateX(4px);
-}
 
 .padding-small {
   padding: 1.5rem;
@@ -3414,14 +3406,6 @@ a.button:hover:after {
   background-color: #2b2b2b;
 }
 
-.main-button:after {
-  content: "→";
-  transition: transform .2s ease;
-}
-
-.main-button:hover:after {
-  transform: translateX(4px);
-}
 
 .main-button.align-left {
   justify-content: flex-start;
@@ -3442,10 +3426,6 @@ a.button:hover:after {
 
 .main-button.submit:hover {
   background-color: #0000;
-}
-
-.main-button.submit:after {
-  content: "";
 }
 
 .form-block {
