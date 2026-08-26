@@ -2685,6 +2685,20 @@ figcaption {
   display: flex;
 }
 
+@media screen and (max-width: 991px) {
+  .navbar-container {
+    justify-content: flex-start;
+  }
+
+  .navbar-menu-button, .navbar-menu-button-2 {
+    flex-shrink: 0;
+    margin-left: auto;
+    display: block;
+    width: 48px;
+    height: 48px;
+  }
+}
+
 .navbar-dropdown-link {
   color: var(--off-black);
   padding: .5rem 1rem;
@@ -2873,16 +2887,18 @@ figcaption {
 .image-wrapper-grid {
   object-fit: cover;
   height: 40rem;
+  min-width: 0;
   position: relative;
   overflow: hidden;
 }
 
 .content-grid-wrapper {
+  min-width: 0;
   overflow: hidden;
 }
 
 .content-grid-wrapper.align-end {
-  overflow: scroll;
+  overflow: visible;
 }
 
 .grid-1-layout {
@@ -4625,6 +4641,25 @@ figcaption {
   .grid-1-layout {
     grid-row-gap: 3rem;
     grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: none;
+  }
+
+  .image-wrapper-grid {
+    height: 20rem;
+  }
+
+  .content-grid-wrapper {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .content-grid-wrapper h1, .content-grid-wrapper h2, .content-grid-wrapper h3, .content-grid-wrapper p {
+    width: 100%;
+    max-width: 100%;
+    white-space: normal;
+    overflow-wrap: break-word;
+    word-break: break-word;
   }
 
   .grid-paragraph-wrapper {
@@ -4769,6 +4804,10 @@ figcaption {
 
   .grid-1-layout {
     grid-template-columns: 1fr;
+  }
+
+  .image-wrapper-grid {
+    height: 16rem;
   }
 
   .footer-left-wrapper {
