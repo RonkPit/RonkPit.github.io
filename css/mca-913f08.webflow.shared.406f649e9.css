@@ -3481,7 +3481,7 @@ a.button:after {
   font-weight: 500;
   display: inline-flex;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   transition: opacity .2s ease;
 }
 
