@@ -2948,7 +2948,7 @@ a.button:after {
   grid-auto-columns: 1fr;
   align-items: start;
   display: grid;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .image-wrapper-project-hero {
@@ -3301,7 +3301,7 @@ a.button:after {
 }
 
 .form-wrapper {
-  overflow: hidden;
+  overflow: visible;
 }
 
 .image-card-blog-container {
