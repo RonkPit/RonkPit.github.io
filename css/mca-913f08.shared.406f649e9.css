@@ -5202,3 +5202,22 @@ html.cursor-none, html.cursor-none * {
     display: none;
   }
 }
+
+.reveal-el {
+  opacity: 0;
+  transform: translate3d(0, 1.5rem, 0);
+  transition: opacity .7s ease, transform .7s ease;
+}
+
+.reveal-el.is-revealed {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-el {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
