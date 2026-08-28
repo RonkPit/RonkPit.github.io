@@ -35,9 +35,9 @@
 .ru-process-num{font-size:1.5rem;font-weight:300;color:var(--off-black);opacity:.4;line-height:1.4;}
 .ru-process-line-col{position:relative;}
 .ru-process-line-col:before{content:"";position:absolute;left:50%;top:0;bottom:0;width:1px;background:var(--primary-dark);transform:translateX(-50%);}
-.ru-process-row:first-child .ru-process-line-col:before{top:2.2rem;}
-.ru-process-row:last-child .ru-process-line-col:before{bottom:calc(100% - 2.2rem);}
-.ru-process-dot{position:absolute;left:50%;top:2.2rem;width:7px;height:7px;border-radius:50%;background:var(--off-black);transform:translate(-50%,-50%);z-index:1;}
+.ru-process-row:first-child .ru-process-line-col:before{top:50%;}
+.ru-process-row:last-child .ru-process-line-col:before{bottom:50%;}
+.ru-process-dot{position:absolute;left:50%;top:50%;width:7px;height:7px;border-radius:50%;background:var(--off-black);transform:translate(-50%,-50%);z-index:1;}
 .ru-process-title{font-size:1rem;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--off-black);margin:0 0 .4rem;}
 .ru-process-desc{font-size:.85rem;font-weight:300;line-height:1.5;color:var(--off-black);margin:0;}
 .ru-cta{background:var(--grey);padding:3.5rem 0;text-align:center;}
