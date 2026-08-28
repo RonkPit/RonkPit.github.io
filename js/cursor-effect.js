@@ -76,4 +76,11 @@
   document.addEventListener('mouseenter', function () {
     if (started) activate();
   });
+
+  document.addEventListener('mousedown', function () {
+    dot.classList.add('is-down');
+  });
+  document.addEventListener('mouseup', function () {
+    dot.classList.remove('is-down');
+  });
 })();
