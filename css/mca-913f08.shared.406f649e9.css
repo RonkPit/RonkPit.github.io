@@ -3577,8 +3577,12 @@ a.button:after {
   overflow: hidden;
 }
 
-.image-100-w, .paragraph-wrapper {
+.image-100-w {
   overflow: hidden;
+}
+
+.paragraph-wrapper {
+  overflow: visible;
 }
 
 .collection-list-tabs {
