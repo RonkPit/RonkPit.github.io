@@ -25,6 +25,11 @@
   });
 
   var mouseX = 0, mouseY = 0, centerX = 0, centerY = 0, started = false;
+  var STORAGE_KEY = 'mcaCursorPos';
+
+  function savePos(x, y) {
+    try { sessionStorage.setItem(STORAGE_KEY, x + ',' + y); } catch (e) {}
+  }
 
   function render() {
     centerX += (mouseX - centerX) * 0.18;
@@ -74,7 +79,19 @@
 
   window.addEventListener('mousemove', function (e) {
     ensureStarted(e.clientX, e.clientY);
+    savePos(e.clientX, e.clientY);
   });
+
+  try {
+    var saved = sessionStorage.getItem(STORAGE_KEY);
+    if (saved) {
+      var parts = saved.split(',');
+      var sx = parseFloat(parts[0]), sy = parseFloat(parts[1]);
+      if (isFinite(sx) && isFinite(sy) && sx >= 0 && sy >= 0 && sx <= window.innerWidth && sy <= window.innerHeight) {
+        ensureStarted(sx, sy);
+      }
+    }
+  } catch (e) {}
 
   document.addEventListener('mouseleave', deactivate);
   document.addEventListener('mouseenter', function () {
@@ -83,6 +100,7 @@
 
   document.addEventListener('mousedown', function (e) {
     ensureStarted(e.clientX, e.clientY);
+    savePos(e.clientX, e.clientY);
     if (e.button === 0) dot.classList.add('is-down');
   });
   document.addEventListener('mouseup', function () {
