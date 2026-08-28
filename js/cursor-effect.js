@@ -55,21 +55,25 @@
     for (var i = 0; i < disks.length; i++) disks[i].el.classList.remove('is-active');
   }
 
-  window.addEventListener('mousemove', function (e) {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-    dot.style.transform = 'translate3d(' + mouseX + 'px,' + mouseY + 'px,0) translate(-50%,-50%)';
+  function ensureStarted(x, y) {
+    mouseX = x;
+    mouseY = y;
+    dot.style.transform = 'translate3d(' + x + 'px,' + y + 'px,0) translate(-50%,-50%)';
     if (!started) {
       started = true;
-      centerX = mouseX;
-      centerY = mouseY;
+      centerX = x;
+      centerY = y;
       for (var i = 0; i < disks.length; i++) {
-        disks[i].x = mouseX;
-        disks[i].y = mouseY;
+        disks[i].x = x;
+        disks[i].y = y;
       }
       activate();
       requestAnimationFrame(render);
     }
+  }
+
+  window.addEventListener('mousemove', function (e) {
+    ensureStarted(e.clientX, e.clientY);
   });
 
   document.addEventListener('mouseleave', deactivate);
@@ -77,7 +81,8 @@
     if (started) activate();
   });
 
-  document.addEventListener('mousedown', function () {
+  document.addEventListener('mousedown', function (e) {
+    ensureStarted(e.clientX, e.clientY);
     dot.classList.add('is-down');
   });
   document.addEventListener('mouseup', function () {
