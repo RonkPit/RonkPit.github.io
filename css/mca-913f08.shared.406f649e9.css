@@ -5147,37 +5147,6 @@ a.button:after {
   }
 }
 
-.cursor-ring {
-  width: 26px;
-  height: 26px;
-  pointer-events: none;
-  z-index: 9999;
-  opacity: 0;
-  border: 1.5px solid rgba(51, 51, 51, .45);
-  border-radius: 50%;
-  transition: width .25s ease, height .25s ease, border-color .25s ease, background-color .25s ease, opacity .25s ease;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-
-.cursor-ring.is-active {
-  opacity: 1;
-}
-
-.cursor-ring.is-hover {
-  width: 52px;
-  height: 52px;
-  background-color: rgba(196, 187, 175, .18);
-  border-color: #c4bbaf;
-}
-
-@media (hover: none), (pointer: coarse) {
-  .cursor-ring {
-    display: none;
-  }
-}
-
 .cursor-disk {
   border-radius: 50%;
   pointer-events: none;
