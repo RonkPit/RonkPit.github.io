@@ -5147,6 +5147,36 @@ a.button:after {
   }
 }
 
+html.cursor-none, html.cursor-none * {
+  cursor: none !important;
+}
+
+.cursor-dot {
+  width: 20px;
+  height: 20px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 10000;
+  opacity: 0;
+  background-color: #333;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, .35);
+  transition: opacity .3s ease;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.cursor-dot.is-active {
+  opacity: 1;
+}
+
+@media (hover: none), (pointer: coarse) {
+  .cursor-dot {
+    display: none;
+  }
+}
+
 .cursor-disk {
   border-radius: 50%;
   pointer-events: none;
