@@ -83,9 +83,12 @@
 
   document.addEventListener('mousedown', function (e) {
     ensureStarted(e.clientX, e.clientY);
-    dot.classList.add('is-down');
+    if (e.button === 0) dot.classList.add('is-down');
   });
   document.addEventListener('mouseup', function () {
+    dot.classList.remove('is-down');
+  });
+  window.addEventListener('blur', function () {
     dot.classList.remove('is-down');
   });
 })();
