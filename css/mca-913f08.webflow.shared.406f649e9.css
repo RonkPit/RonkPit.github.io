@@ -2715,10 +2715,10 @@ a.button:after {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 1296px;
+  max-width: 80rem;
   height: 100%;
-  margin-left: 0;
-  margin-right: 0;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
 }
 
@@ -2793,7 +2793,7 @@ a.button:after {
   height: auto;
   min-height: 4.5rem;
   max-height: 4.5rem;
-  padding-left: 5%;
+  padding-left: 0%;
   padding-right: 5%;
   display: flex;
 }
@@ -4103,7 +4103,7 @@ a.button:after {
   height: auto;
   min-height: 4.5rem;
   max-height: 4.5rem;
-  padding-left: 5%;
+  padding-left: 0%;
   padding-right: 5%;
   display: flex;
 }
