@@ -5186,27 +5186,6 @@ html.cursor-none, html.cursor-none * {
   }
 }
 
-.cursor-disk {
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9998;
-  opacity: 0;
-  transition: opacity .5s ease;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-
-.cursor-disk.is-active {
-  opacity: 1;
-}
-
-@media (hover: none), (pointer: coarse) {
-  .cursor-disk {
-    display: none;
-  }
-}
-
 .reveal-el {
   opacity: 0;
   transform: translate3d(0, 1.5rem, 0);
