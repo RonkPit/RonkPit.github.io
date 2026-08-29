@@ -5156,8 +5156,8 @@ html.cursor-none, html.cursor-none * {
 }
 
 .cursor-dot {
-  width: 20px;
-  height: 20px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
   pointer-events: none;
   z-index: 10000;
