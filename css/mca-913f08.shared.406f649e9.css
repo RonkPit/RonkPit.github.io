@@ -2890,7 +2890,6 @@ a.button:after {
   margin-left: 0;
   padding-top: 2rem;
   padding-bottom: 2rem;
-  padding-left: 0%;
 }
 
 .section.padding-section-large.color-background-primary-light {
@@ -4811,6 +4810,11 @@ a.button:after {
     align-items: flex-start;
   }
 
+  .heading---paragraph-wrapper > * {
+    width: 100%;
+    max-width: 100%;
+  }
+
   .button-w-effect, .main-button {
     margin: -.5rem;
     padding: .5rem;
@@ -4967,6 +4971,11 @@ a.button:after {
   .heading---paragraph-wrapper {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .heading---paragraph-wrapper > * {
+    width: 100%;
+    max-width: 100%;
   }
 
   .main-button {
