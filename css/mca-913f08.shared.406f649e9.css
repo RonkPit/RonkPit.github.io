@@ -1901,6 +1901,11 @@ textarea.w-input, textarea.w-select {
   top: 0;
 }
 
+.w-nav-overlay .navbar-menu,
+.w-nav-overlay .navbar-menu-2 {
+  transform: none !important;
+}
+
 .w-nav[data-animation="over-left"] .w-nav-overlay {
   width: auto;
 }
@@ -4309,7 +4314,9 @@ a.button:after {
     background-clip: border-box;
     border-bottom: 1px solid #000;
     padding: 1rem 5% 2rem;
-    position: absolute;
+    position: static !important;
+    float: none !important;
+    width: 100% !important;
     overflow: auto;
   }
 
@@ -4537,7 +4544,9 @@ a.button:after {
     background-clip: border-box;
     border-bottom: 1px solid #000;
     padding: 1rem 5% 2rem;
-    position: absolute;
+    position: static !important;
+    float: none !important;
+    width: 100% !important;
     overflow: auto;
   }
 
