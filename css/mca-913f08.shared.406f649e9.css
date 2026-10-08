@@ -5254,3 +5254,15 @@ html.cursor-none, html.cursor-none * {
     transition: none;
   }
 }
+
+/* Landing page portrait: keep the whole crop visible on phones instead of clipping the top */
+@media screen and (max-width: 767px) {
+  .image-wrapper-grid.retrato {
+    height: 26rem;
+  }
+
+  .image-wrapper-grid.retrato .image-medium {
+    min-height: 0;
+    height: 100%;
+  }
+}
